@@ -1,0 +1,10 @@
+<div class="column js-content">
+
+<h2>Writings.</h2>
+
+<% page.posts.forEach(function(article, index) { %>
+	<div>
+		<h3><a href="<%- url_for(article.path) %>"><%- index %>.<%- article.title %></a></h3>
+	</div>
+<% }) %>
+</div>

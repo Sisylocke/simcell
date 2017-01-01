@@ -1,0 +1,23 @@
+<div class="column js-content">
+    <article>
+        <header class="post-header">
+			<h2 class="post-title"><%- page.title %></h2>
+			<small>
+				<%- page.date.format('DD MMM YYYY') %> - by @Sisylocke
+			</small>
+		</header>
+		<div><%- page.content %></div>
+	</article>
+	<div class="pagination" data-pjax>
+		<% if(page.prev){ %> 
+			<a class="page-nav" href="<%- url_for(page.prev.path) %>" id="js-previous-post">
+			&lt; <%- page.prev.title %>
+			</a>
+		<% } %>
+		
+		<% if(page.next){ %>
+			<a class="page-nav" href="<%- url_for(page.next.path) %>" id="js-next-post">
+			<%- page.next.title %> &gt;
+			</a>
+		<% } %>
+</div>
